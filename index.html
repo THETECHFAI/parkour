@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk Parkour</title>
+    <style>
+        body { margin: 0; overflow: hidden; font-family: monospace; background-color: #000; }
+        canvas { display: block; }
+        #info { position: absolute; top: 10px; width: 100%; text-align: center; color: #0ff; pointer-events: none; transition: opacity 0.5s; opacity: 0; }
+        #controls { position: absolute; bottom: 10px; left: 10px; color: #0ff; background-color: rgba(0, 0, 0, 0.5); padding: 5px; border-radius: 5px; font-size: 12px; }
+        #focus-prompt { 
+            position: absolute; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+            color: #0ff; 
+            font-size: 20px; 
+            background-color: rgba(0, 0, 0, 0.8); 
+            padding: 20px; 
+            border-radius: 10px; 
+            text-align: center; 
+            cursor: pointer; 
+        }
+    </style>
+</head>
+<body>
+    <div id="info">HACKING...</div>
+    <div id="controls">WASD: Move | SPACE: Jump | SHIFT: Sprint</div>
+    <div id="focus-prompt">Click to Start<br>(Ensure window has focus to use keyboard controls)</div>
+    <script type="module" src="/src/main.js"></script>
+    <script>
+        const focusPrompt = document.getElementById('focus-prompt');
+        focusPrompt.addEventListener('click', () => {
+            focusPrompt.style.display = 'none';
+            window.focus();
+        });
+    </script>
+</body>
+</html>
