@@ -369,6 +369,12 @@ function createStartScreen() {
     document.body.appendChild(startScreen);
     document.body.appendChild(gameUI);
     
+    // Add Vibe Jam 2025 competition badge
+    const jamBadge = document.createElement('div');
+    jamBadge.id = 'jam-badge';
+    jamBadge.innerHTML = '<a target="_blank" href="https://jam.pieter.com" style="font-family: \'system-ui\', sans-serif; position: fixed; bottom: 60px; right: 20px; padding: 7px; font-size: 14px; font-weight: bold; background: #fff; color: #000; text-decoration: none; z-index: 10000; border-radius: 12px; border: 1px solid #fff;">🕹️ Vibe Jam 2025</a>';
+    document.body.appendChild(jamBadge);
+    
     // Add signature to the start screen
     const signature = document.createElement('div');
     signature.id = 'signature';
@@ -412,6 +418,10 @@ function startGame() {
         const startSignature = document.getElementById('signature');
         if (startSignature) startSignature.remove();
         
+        // Remove the start screen badge
+        const startBadge = document.getElementById('jam-badge');
+        if (startBadge) startBadge.remove();
+        
         // Add signature to the game screen
         const gameSignature = document.createElement('div');
         gameSignature.id = 'game-signature';
@@ -426,6 +436,12 @@ function startGame() {
         gameSignature.style.opacity = '0.7';
         gameSignature.style.zIndex = '999';
         document.body.appendChild(gameSignature);
+        
+        // Add Vibe Jam 2025 competition badge above the signature
+        const jamBadge = document.createElement('div');
+        jamBadge.id = 'jam-badge';
+        jamBadge.innerHTML = '<a target="_blank" href="https://jam.pieter.com" style="font-family: \'system-ui\', sans-serif; position: fixed; bottom: 60px; right: 20px; padding: 7px; font-size: 14px; font-weight: bold; background: #fff; color: #000; text-decoration: none; z-index: 10000; border-radius: 12px; border: 1px solid #fff;">🕹️ Vibe Jam 2025</a>';
+        document.body.appendChild(jamBadge);
         
         // Reset game state
         score = 0;
