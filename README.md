@@ -1,49 +1,60 @@
-# 🏃 Cyberpunk Parkour
+# 🏃‍♂️ Cyber Parkour
 
-> Hack the skyline. Rewrite your reality. Escape the net.
+**Hack the skyline. Rewrite your reality. Escape the net.**
 
-## What is it?
+> *A 3D cyberpunk parkour game built with Three.js and real-time physics.*
 
-Cyberpunk Parkour is a 3D first-person parkour game set in a neon-lit cyberpunk cityscape. Run, jump, and sprint across rooftops using physics-based movement powered by Three.js and Cannon.js. Built as a browser game with dynamic music that responds to your combo intensity.
+## What It Does
+
+Cyber Parkour is a browser-based 3D platformer set in a neon-lit cyberpunk world. Run, jump, and combo your way across procedurally placed platforms with real-time physics. Features dynamic music that intensifies with your combo multiplier, particle trails on jumps, ripple effects on landings, and a competition badge system.
 
 ## ✨ Features
 
-- 🌃 **Cyberpunk World** — Neon-lit 3D cityscape with atmospheric lighting
-- 🏃 **Physics-Based Movement** — Realistic running, jumping, and sprinting with Cannon.js physics
-- 🎵 **Dynamic Music** — Soundtrack intensity scales with your combo multiplier
-- ✨ **Particle Effects** — Jump trails and landing ripple effects
-- 📏 **Distance Tracking** — Total horizontal distance metric
-- 🎮 **Smooth Controls** — WASD movement, space to jump, shift to sprint
-- 🏆 **Score System** — Points for distance and tricks with combo multipliers
-- 📱 **Browser-Based** — No install needed, runs in any modern browser
+- 🌆 3D cyberpunk environment rendered with Three.js
+- 🎮 Physics-based movement powered by cannon-es
+- 🎵 Dynamic music that responds to combo intensity
+- ✨ Jump particle trails and landing ripple effects
+- 📏 Total horizontal distance tracking
+- 🏅 Competition badge system
+- 🎯 Course structure with freestyle sections
+- 🔗 Social media integration
+- 📱 Browser-based — no install required
 
 ## 🛠️ Tech Stack
 
-- **3D Engine:** Three.js
-- **Physics:** Cannon.js (cannon-es)
-- **Build Tool:** Vite 5
-- **Language:** JavaScript (ES Modules)
+- **Three.js** — 3D rendering with GLTF model support
+- **cannon-es** — Real-time physics engine
+- **JavaScript** — Game logic (126KB)
+- **Vite** — Development server and bundling
+- **HTML/CSS** — UI and styling
 
 ## 🚀 Getting Started
 
 ```bash
-# Clone the repo
 git clone https://github.com/THETECHFAI/parkour.git
-
-# Install dependencies
+cd parkour
 npm install
-
-# Run locally
-npm run dev
+npx vite
 ```
+
+Open the local URL shown in your terminal to play.
 
 ## 🎮 Controls
 
-| Key | Action |
-|-----|--------|
-| W/A/S/D | Move |
-| SPACE | Jump |
-| SHIFT | Sprint |
+- **Arrow Keys / WASD** — Move
+- **Space** — Jump
+- **Chain jumps** — Build combos for bonus points and dynamic music
+
+## 📁 Project Structure
+
+```
+parkour/
+├── index.html       # Entry point and UI
+├── src/
+│   └── main.js      # All game logic (scene, physics, controls, audio, scoring)
+├── package.json     # Dependencies
+└── node_modules/    # Three.js, cannon-es, Vite
+```
 
 ## 📄 License
 
